@@ -3,43 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Akshay Vanathadupula | Data Analyst</title>
+  <title>Akshay Vanathadupula | Data Analyst Portfolio</title>
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: "Segoe UI", Arial, sans-serif;
     }
 
     body {
-      background: #0f172a;
-      color: #e5e7eb;
-      line-height: 1.6;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.7;
     }
 
     header {
+      background: linear-gradient(135deg, #ffffff, #e0f2fe);
       padding: 70px 10%;
-      background: linear-gradient(135deg, #111827, #1e293b);
+      border-bottom: 1px solid #dbeafe;
+    }
+
+    .hero {
+      max-width: 1000px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1d4ed8;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 48px;
-      color: #ffffff;
+      font-size: 54px;
+      color: #0f172a;
       margin-bottom: 10px;
     }
 
     .title {
-      font-size: 24px;
-      color: #38bdf8;
+      font-size: 26px;
+      color: #2563eb;
+      font-weight: 700;
       margin-bottom: 20px;
     }
 
     .intro {
-      max-width: 800px;
-      font-size: 18px;
-      color: #cbd5e1;
+      max-width: 850px;
+      font-size: 19px;
+      color: #475569;
     }
 
     .buttons {
@@ -48,87 +64,162 @@
 
     .btn {
       display: inline-block;
+      padding: 13px 22px;
       margin-right: 12px;
       margin-bottom: 12px;
-      padding: 12px 20px;
-      background: #38bdf8;
-      color: #020617;
+      background: #2563eb;
+      color: white;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+      border-radius: 10px;
+      font-weight: 700;
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
     }
 
     .btn.secondary {
-      background: transparent;
-      color: #38bdf8;
-      border: 1px solid #38bdf8;
+      background: white;
+      color: #2563eb;
+      border: 1px solid #bfdbfe;
+      box-shadow: none;
     }
 
     section {
       padding: 55px 10%;
+      max-width: 1250px;
+      margin: auto;
     }
 
     h2 {
-      font-size: 32px;
-      margin-bottom: 25px;
-      color: #ffffff;
+      font-size: 34px;
+      color: #0f172a;
+      margin-bottom: 24px;
     }
 
-    .card-container {
+    .section-subtitle {
+      color: #64748b;
+      margin-bottom: 28px;
+      font-size: 17px;
+    }
+
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
     }
 
     .card {
-      background: #1e293b;
-      padding: 25px;
-      border-radius: 14px;
-      border: 1px solid #334155;
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.07);
     }
 
     .card h3 {
-      color: #38bdf8;
+      color: #1d4ed8;
       margin-bottom: 10px;
+      font-size: 23px;
+    }
+
+    .card p {
+      color: #475569;
+      margin-bottom: 12px;
+    }
+
+    .highlight {
+      font-weight: 700;
+      color: #0f172a;
     }
 
     .tag {
       display: inline-block;
-      background: #334155;
-      color: #cbd5e1;
-      padding: 6px 10px;
-      margin: 5px 5px 5px 0;
-      border-radius: 20px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      padding: 7px 11px;
+      margin: 6px 6px 0 0;
+      border-radius: 999px;
       font-size: 14px;
+      font-weight: 700;
     }
 
     .project-btn {
       display: inline-block;
-      margin-top: 15px;
-      color: #38bdf8;
+      margin-top: 18px;
+      color: #2563eb;
+      font-weight: 800;
       text-decoration: none;
-      font-weight: bold;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .stat {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      padding: 22px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 28px;
+      color: #2563eb;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #2563eb, #0ea5e9);
+      color: white;
+      padding: 40px;
+      border-radius: 22px;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      color: white;
+    }
+
+    .contact-box p {
+      color: #e0f2fe;
+      margin-bottom: 22px;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
-      background: #020617;
-      color: #94a3b8;
+      padding: 28px;
+      color: #64748b;
+      background: #ffffff;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 40px;
+      }
+
+      header, section {
+        padding: 45px 6%;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
+<header>
+  <div class="hero">
+    <span class="badge">Data Analyst Portfolio</span>
     <h1>Akshay Vanathadupula</h1>
-    <p class="title">Data Analyst</p>
+    <p class="title">Data Analyst | SQL | Python | Tableau | Excel</p>
 
     <p class="intro">
       Data Analyst with 2+ years of experience in business analysis, reporting, and ERP consulting.
-      I use SQL, Python, Tableau, and Excel to transform data into actionable insights, build dashboards,
-      and support better business decisions.
+      I transform raw data into actionable insights through SQL, Python, Tableau, and Excel, helping
+      businesses improve decision-making through dashboards, analysis, and clear recommendations.
     </p>
 
     <div class="buttons">
@@ -136,66 +227,91 @@
       <a href="https://github.com/VAkshay11" class="btn secondary" target="_blank">GitHub</a>
       <a href="mailto:akshayvanathadupula11@gmail.com" class="btn secondary">Email</a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I combine business process understanding with analytical tools to solve real-world problems.
-      My work focuses on data cleaning, exploratory analysis, dashboarding, segmentation, reporting,
-      and translating insights into practical business recommendations.
-    </p>
-  </section>
+<section>
+  <h2>About Me</h2>
+  <p class="section-subtitle">
+    I combine business process knowledge with analytics to solve real-world business problems.
+  </p>
 
-  <section>
-    <h2>Featured Projects</h2>
-
-    <div class="card-container">
-
-      <div class="card">
-        <h3>Amazon India</h3>
-        <p><strong>Revenue & Customer Segmentation Analysis</strong></p>
-        <p>
-          Analyzed payments, pricing, revenue, customer segments, repeat customers,
-          and monthly growth trends to support pricing, promotions, inventory, and retention strategies.
-        </p>
-        <span class="tag">SQL</span>
-        <span class="tag">Excel</span>
-        <br>
-        <a href="#" class="project-btn">Project Coming Soon</a>
-      </div>
-
-      <div class="card">
-        <h3>Placed</h3>
-        <p><strong>Candidate Employability & Placement Success Analysis</strong></p>
-        <p>
-          Analyzed academic, technical, practical, cognitive, and professional factors
-          influencing placement success and employability outcomes.
-        </p>
-        <span class="tag">Python</span>
-        <span class="tag">Tableau</span>
-        <br>
-        <a href="#" class="project-btn">Project Coming Soon</a>
-      </div>
-
-      <div class="card">
-        <h3>Bumble</h3>
-        <p><strong>User Behavior & Statistical Segmentation Analysis</strong></p>
-        <p>
-          Analyzed 59,000+ user profiles to evaluate demographics, profile completeness,
-          income patterns, regional behavior, and engagement opportunities.
-        </p>
-        <span class="tag">Python</span>
-        <span class="tag">Statistics</span>
-        <br>
-        <a href="#" class="project-btn">Project Coming Soon</a>
-      </div>
-
+  <div class="stats">
+    <div class="stat">
+      <strong>2+</strong>
+      Years Experience
     </div>
-  </section>
+    <div class="stat">
+      <strong>3</strong>
+      Analytics Case Studies
+    </div>
+    <div class="stat">
+      <strong>4+</strong>
+      Core Tools
+    </div>
+    <div class="stat">
+      <strong>Top</strong>
+      NextLeap Fellow
+    </div>
+  </div>
+</section>
 
-  <section>
-    <h2>Skills</h2>
+<section>
+  <h2>Featured Projects</h2>
+  <p class="section-subtitle">
+    End-to-end data analytics projects focused on business problems, insights, and recommendations.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Amazon India</h3>
+      <p class="highlight">E-Commerce Revenue & Customer Segmentation Analysis</p>
+      <p>
+        Analyzed payments, pricing, revenue, customer segments, repeat customers, and monthly growth trends
+        to support pricing, promotion, inventory, and retention strategies.
+      </p>
+      <span class="tag">SQL</span>
+      <span class="tag">Excel</span>
+      <span class="tag">Customer Segmentation</span>
+      <br>
+      <a href="#" class="project-btn">Project Link Coming Soon →</a>
+    </div>
+
+    <div class="card">
+      <h3>Placed</h3>
+      <p class="highlight">Candidate Employability & Placement Success Analysis</p>
+      <p>
+        Analyzed academic, technical, practical, cognitive, and professional factors influencing placement
+        success and employability outcomes.
+      </p>
+      <span class="tag">Python</span>
+      <span class="tag">Tableau</span>
+      <span class="tag">Dashboard</span>
+      <br>
+      <a href="#" class="project-btn">Project Link Coming Soon →</a>
+    </div>
+
+    <div class="card">
+      <h3>Bumble</h3>
+      <p class="highlight">User Behavior & Statistical Segmentation Analysis</p>
+      <p>
+        Analyzed 59,000+ user profiles to evaluate demographics, profile completeness, income patterns,
+        regional behavior, and engagement opportunities.
+      </p>
+      <span class="tag">Python</span>
+      <span class="tag">Statistics</span>
+      <span class="tag">User Analytics</span>
+      <br>
+      <a href="#" class="project-btn">Project Link Coming Soon →</a>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div>
     <span class="tag">SQL</span>
     <span class="tag">Python</span>
     <span class="tag">Tableau</span>
@@ -205,43 +321,61 @@
     <span class="tag">NumPy</span>
     <span class="tag">Matplotlib</span>
     <span class="tag">Business Analysis</span>
-    <span class="tag">Dashboards</span>
     <span class="tag">Reporting</span>
-  </section>
+    <span class="tag">Dashboards</span>
+    <span class="tag">Root Cause Analysis</span>
+  </div>
+</section>
 
-  <section>
-    <h2>Experience</h2>
+<section>
+  <h2>Experience</h2>
 
+  <div class="grid">
     <div class="card">
-      <h3>Odoo Functional Consultant – Tekgenio</h3>
+      <h3>Tekgenio</h3>
+      <p class="highlight">Odoo Functional Consultant</p>
       <p>
-        Worked on business process analysis, workflow optimization, reporting, implementation support,
-        and stakeholder coordination across ERP projects.
+        Worked on requirements gathering, business process analysis, workflow optimization,
+        reporting, dashboards, implementation support, and stakeholder coordination.
       </p>
     </div>
 
-    <br>
-
     <div class="card">
-      <h3>Creative Strategist – Exporia Advertising Agency</h3>
+      <h3>Exporia Advertising Agency</h3>
+      <p class="highlight">Creative Strategist</p>
       <p>
-        Supported requirement gathering, market research, competitive analysis, and project coordination
-        for a B2C on-demand service application.
+        Supported user requirement analysis, market research, competitive analysis, project planning,
+        and coordination for a B2C on-demand service application.
       </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <h2>Certification</h2>
-    <div class="card">
-      <h3>NextLeap Data Analyst Fellowship</h3>
-      <p>Top Fellow</p>
-    </div>
-  </section>
+<section>
+  <h2>Certification</h2>
+  <div class="card">
+    <h3>NextLeap Data Analyst Fellowship</h3>
+    <p class="highlight">Top Fellow</p>
+    <p>
+      Completed a 16-week Data Analyst Fellowship involving SQL, Python, Excel, Tableau,
+      business case studies, and analytics project work.
+    </p>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2026 Akshay Vanathadupula | Data Analyst Portfolio</p>
-  </footer>
+<section>
+  <div class="contact-box">
+    <h2>Let's Connect</h2>
+    <p>
+      Open to Data Analyst roles where I can apply analytics, dashboards, and business problem-solving.
+    </p>
+    <a href="mailto:akshayvanathadupula11@gmail.com" class="btn secondary">Contact Me</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Akshay Vanathadupula | Data Analyst Portfolio
+</footer>
 
 </body>
 </html>
