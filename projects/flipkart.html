@@ -1,1 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flipkart Customer Support Analytics | Akshay Vanathadupula</title>
 
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", Arial, sans-serif; }
+    body { background: #f8fafc; color: #0f172a; line-height: 1.7; }
+    nav { padding: 18px 9%; background: white; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; }
+    nav a { color: #2563eb; text-decoration: none; font-weight: 800; }
+    header { padding: 80px 9%; background: linear-gradient(135deg, #e0f2fe, #ffffff, #ccfbf1); }
+    .badge { display: inline-block; background: #ccfbf1; color: #0f766e; padding: 8px 16px; border-radius: 999px; font-weight: 800; margin-bottom: 18px; }
+    h1 { font-size: 50px; line-height: 1.1; margin-bottom: 18px; }
+    .subtitle { font-size: 22px; color: #2563eb; font-weight: 800; margin-bottom: 18px; }
+    header p { max-width: 950px; font-size: 18px; color: #475569; }
+    section { padding: 55px 9%; max-width: 1200px; margin: auto; }
+    h2 { font-size: 34px; margin-bottom: 22px; color: #0f172a; }
+    h3 { color: #2563eb; margin-bottom: 10px; }
+    .card { background: white; padding: 28px; border-radius: 22px; border: 1px solid #e2e8f0; box-shadow: 0 14px 35px rgba(15, 23, 42, 0.07); margin-bottom: 24px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 24px; }
+    p, li { color: #475569; font-size: 17px; }
+    ul { padding-left: 22px; }
+    .tag { display: inline-block; background: #e0f2fe; color: #0369a1; padding: 7px 12px; margin: 6px 6px 0 0; border-radius: 999px; font-size: 14px; font-weight: 800; }
+    .tag.teal { background: #ccfbf1; color: #0f766e; }
+    .btn { display: inline-block; padding: 13px 22px; margin: 14px 10px 0 0; border-radius: 10px; background: #2563eb; color: white; text-decoration: none; font-weight: 800; }
+    .btn.secondary { background: white; color: #2563eb; border: 1px solid #bfdbfe; }
+    .highlight { color: #0f172a; font-weight: 800; }
+    footer { text-align: center; padding: 30px; background: white; border-top: 1px solid #e2e8f0; color: #64748b; }
+    @media (max-width: 750px) { h1 { font-size: 38px; } header, section { padding: 45px 6%; } }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="../index.html">← Back to Portfolio</a>
+</nav>
+
+<header>
+  <span class="badge">Excel Dashboard + Customer Analytics Case Study</span>
+  <h1>Flipkart Customer Support Analytics</h1>
+  <p class="subtitle">Customer Satisfaction, SLA, Channel & Service Performance Analysis</p>
+  <p>
+    This project analyzes Flipkart-style customer support interactions to understand what drives customer
+    satisfaction. The analysis evaluates CSAT, SLA performance, support channels, call duration, city-level
+    performance, and service bottlenecks using Excel dashboards and pivot-based analysis.
+  </p>
+
+  <a href="../flipkart/flipkart_customer_support_dashboard.xlsx" class="btn">Download Excel Dashboard</a>
+  <a href="../index.html" class="btn secondary">Back to Portfolio</a>
+</header>
+
+<section>
+  <h2>Business Context</h2>
+  <div class="card">
+    <p>
+      Customer support quality directly affects customer trust, retention, and brand perception.
+      For an e-commerce platform, understanding how service channels, SLA adherence, call duration,
+      and regional support performance influence CSAT helps improve operational efficiency and customer experience.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Business Objective</h2>
+  <div class="card">
+    <ul>
+      <li>Analyze customer satisfaction across support channels.</li>
+      <li>Evaluate whether SLA performance strongly impacts CSAT.</li>
+      <li>Compare call centers and cities based on CSAT and call duration.</li>
+      <li>Identify support channels that require improvement.</li>
+      <li>Provide recommendations to improve customer experience and service efficiency.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Dataset Overview</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Data Scope</h3>
+      <p>30,000 customer support records covering CSAT scores, sentiment, call duration, SLA status, city, state, channel, and call center.</p>
+    </div>
+
+    <div class="card">
+      <h3>Support Channels</h3>
+      <p>Analyzed customer interactions across Call-Center, Chatbot, Email, and Web support channels.</p>
+    </div>
+
+    <div class="card">
+      <h3>Dashboarding</h3>
+      <p>Built Excel pivot tables and dashboard views to compare CSAT, SLA, channel, location, and duration patterns.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Analysis Approach</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>SLA vs CSAT</h3>
+      <p>Compared customer satisfaction across Above SLA, Below SLA, and Within SLA categories.</p>
+    </div>
+
+    <div class="card">
+      <h3>Channel Performance</h3>
+      <p>Evaluated CSAT and average call duration across Call-Center, Chatbot, Email, and Web channels.</p>
+    </div>
+
+    <div class="card">
+      <h3>Location Analysis</h3>
+      <p>Compared call centers and cities to identify regional service performance differences.</p>
+    </div>
+
+    <div class="card">
+      <h3>Duration Bucketing</h3>
+      <p>Grouped calls into short, medium, and long duration buckets to evaluate their relationship with CSAT.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Key Insights</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>SLA Alone Did Not Strongly Explain CSAT</h3>
+      <p>
+        Average CSAT was very close across SLA categories: Above SLA, Below SLA, and Within SLA all stayed around
+        the mid-5 range. This suggests SLA status alone may not be the strongest driver of customer satisfaction.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Channel Had a Stronger Impact Than SLA</h3>
+      <p>
+        Channel-level analysis showed clearer differences in customer satisfaction. Web and Call-Center interactions
+        performed better, while Chatbot had comparatively lower CSAT.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Call-Center and Web Performed Better</h3>
+      <p>
+        Call-Center and Web support showed stronger CSAT performance, indicating that customers may prefer channels
+        where issue resolution feels more direct or reliable.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Chatbot Needs Improvement</h3>
+      <p>
+        Chatbot interactions showed weaker CSAT compared to other channels, suggesting improvement opportunities in
+        escalation, response quality, and self-service experience.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>City-Level Performance Varied</h3>
+      <p>
+        Call center location analysis showed that Chennai had stronger average CSAT, while some locations such as
+        Kolkata showed comparatively lower satisfaction.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Duration Was Not the Only Driver</h3>
+      <p>
+        Average call duration remained close across channels, meaning longer or shorter calls alone do not fully
+        explain customer satisfaction. Resolution quality likely matters more.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Business Recommendations</h2>
+  <div class="card">
+    <ul>
+      <li><span class="highlight">Improve chatbot resolution quality:</span> Add better escalation paths, smarter intent detection, and post-chat feedback loops.</li>
+      <li><span class="highlight">Use channel-specific strategies:</span> Treat Web, Call-Center, Email, and Chatbot separately instead of using one support strategy for all channels.</li>
+      <li><span class="highlight">Study high-performing locations:</span> Analyze practices from stronger-performing centers such as Chennai and apply learnings to lower-performing locations.</li>
+      <li><span class="highlight">Move beyond SLA-only tracking:</span> Combine SLA with resolution quality, sentiment, repeat contact rate, and customer feedback.</li>
+      <li><span class="highlight">Optimize support routing:</span> Route complex or sensitive issues to higher-performing support channels instead of relying heavily on automation.</li>
+      <li><span class="highlight">Monitor CSAT by channel and city:</span> Build recurring dashboards to track satisfaction trends and operational improvement areas.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Business Impact</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Better Customer Experience</h3>
+      <p>Identifies service channels and regions where customer experience can be improved.</p>
+    </div>
+
+    <div class="card">
+      <h3>Smarter Support Operations</h3>
+      <p>Helps prioritize improvements across chatbot, call-center, web, and email support.</p>
+    </div>
+
+    <div class="card">
+      <h3>Improved CSAT Monitoring</h3>
+      <p>Supports ongoing dashboard-based tracking of satisfaction, SLA, duration, and channel performance.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Tools & Skills Demonstrated</h2>
+  <div class="card">
+    <span class="tag">Excel</span>
+    <span class="tag">Pivot Tables</span>
+    <span class="tag">Dashboarding</span>
+    <span class="tag">CSAT Analysis</span>
+    <span class="tag">SLA Analysis</span>
+    <span class="tag teal">Customer Support Analytics</span>
+    <span class="tag teal">Operations Analytics</span>
+    <span class="tag teal">Business Recommendations</span>
+    <span class="tag teal">Data Storytelling</span>
+  </div>
+</section>
+
+<section>
+  <h2>Project Files</h2>
+  <div class="card">
+    <p>
+      Explore the Excel dashboard and pivot-based analysis used for customer support performance evaluation.
+    </p>
+
+    <a href="../flipkart/flipkart_customer_support_dashboard.xlsx" class="btn">Download Excel Dashboard</a>
+    <a href="../index.html" class="btn secondary">Back to Portfolio</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Akshay Vanathadupula | Flipkart Customer Support Analytics Case Study
+</footer>
+
+</body>
+</html>
