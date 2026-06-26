@@ -1,1 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bumble User Analytics | Akshay Vanathadupula</title>
 
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", Arial, sans-serif; }
+    body { background: #fffdf5; color: #1f2937; line-height: 1.7; }
+    nav { padding: 18px 9%; background: white; border-bottom: 1px solid #fde68a; position: sticky; top: 0; z-index: 100; }
+    nav a { color: #ca8a04; text-decoration: none; font-weight: 800; }
+
+    header {
+      padding: 80px 9%;
+      background: linear-gradient(135deg, #fef3c7, #ffffff, #fffbeb);
+    }
+
+    .badge {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    h1 { font-size: 50px; line-height: 1.1; margin-bottom: 18px; color: #111827; }
+    .subtitle { font-size: 22px; color: #ca8a04; font-weight: 800; margin-bottom: 18px; }
+    header p { max-width: 950px; font-size: 18px; color: #4b5563; }
+
+    section { padding: 55px 9%; max-width: 1200px; margin: auto; }
+    h2 { font-size: 34px; margin-bottom: 22px; color: #111827; }
+    h3 { color: #ca8a04; margin-bottom: 10px; }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 22px;
+      border: 1px solid #fde68a;
+      box-shadow: 0 14px 35px rgba(120, 53, 15, 0.08);
+      margin-bottom: 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 24px;
+    }
+
+    p, li { color: #4b5563; font-size: 17px; }
+    ul { padding-left: 22px; }
+
+    .tag {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      padding: 7px 12px;
+      margin: 6px 6px 0 0;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .tag.soft {
+      background: #e0f2fe;
+      color: #0369a1;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      margin: 14px 10px 0 0;
+      border-radius: 10px;
+      background: #ca8a04;
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .btn.secondary {
+      background: white;
+      color: #ca8a04;
+      border: 1px solid #facc15;
+    }
+
+    .highlight { color: #111827; font-weight: 800; }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: white;
+      border-top: 1px solid #fde68a;
+      color: #6b7280;
+    }
+
+    @media (max-width: 750px) {
+      h1 { font-size: 38px; }
+      header, section { padding: 45px 6%; }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="../index.html">← Back to Portfolio</a>
+</nav>
+
+<header>
+  <span class="badge">Python + Product Analytics Case Study</span>
+  <h1>Bumble User Behavior & Market Segmentation Analysis</h1>
+  <p class="subtitle">Understanding User Profiles, Demographics, Lifestyle Patterns & Engagement Opportunities</p>
+  <p>
+    This project analyzes 59,000+ user profiles to understand demographic patterns, profile completeness,
+    income behavior, lifestyle attributes, and geographic trends. The goal is to translate user-level data
+    into product, personalization, and engagement recommendations for a dating platform.
+  </p>
+
+  <a href="../bumble/bumble_user_behavior_analysis.ipynb" class="btn">View Python Notebook</a>
+  <a href="../index.html" class="btn secondary">Back to Portfolio</a>
+</header>
+
+<section>
+  <h2>Business Context</h2>
+  <div class="card">
+    <p>
+      Dating platforms depend heavily on user profile quality, personalization, and engagement.
+      By analyzing user demographics, lifestyle preferences, income segments, profile completeness,
+      and regional behavior, platforms can improve onboarding, match recommendations, user retention,
+      and premium feature targeting.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Business Objective</h2>
+  <div class="card">
+    <ul>
+      <li>Understand the dominant user demographics and age segments.</li>
+      <li>Analyze profile completeness and identify opportunities to improve onboarding.</li>
+      <li>Study lifestyle attributes such as diet, pets, drinking habits, and personality indicators.</li>
+      <li>Explore income, age, gender, and geographic patterns.</li>
+      <li>Generate product recommendations to improve personalization and engagement.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Dataset Overview</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Data Scope</h3>
+      <p>59,000+ user profiles containing demographic, lifestyle, income, geographic, and profile-level attributes.</p>
+    </div>
+
+    <div class="card">
+      <h3>Analysis Type</h3>
+      <p>Exploratory data analysis, segmentation, statistical analysis, correlation analysis, and feature engineering.</p>
+    </div>
+
+    <div class="card">
+      <h3>Business Use Case</h3>
+      <p>Improve onboarding, user personalization, profile completion, engagement quality, and market segmentation.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Analysis Approach</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Data Cleaning</h3>
+      <p>Handled missing values, inconsistent fields, categorical variables, and profile-level attributes.</p>
+    </div>
+
+    <div class="card">
+      <h3>Feature Engineering</h3>
+      <p>Created derived variables such as age groups, income segments, profile completeness, and lifestyle indicators.</p>
+    </div>
+
+    <div class="card">
+      <h3>Segmentation</h3>
+      <p>Segmented users by age, income, relationship status, location, and lifestyle preferences.</p>
+    </div>
+
+    <div class="card">
+      <h3>Statistical Analysis</h3>
+      <p>Explored correlations and patterns between income, age, gender, location, and user behavior.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Key Insights</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Young Professionals Are the Core Audience</h3>
+      <p>
+        The strongest user concentration appears among young adults and professionals, making this group
+        important for onboarding, engagement, and premium feature strategy.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Profile Completeness Is a Major Opportunity</h3>
+      <p>
+        Profile completeness varies significantly across users, suggesting opportunities to improve onboarding,
+        recommendations, trust, and match quality.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Income Alone Does Not Explain User Behavior</h3>
+      <p>
+        Income patterns showed variation across age, gender, and geography, but income alone should not be treated
+        as the primary driver of personalization.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Lifestyle Attributes Can Improve Matching</h3>
+      <p>
+        Attributes such as pets, diet, drinking habits, and personality indicators can support better compatibility
+        scoring and personalized match recommendations.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Geography Shows Market-Level Differences</h3>
+      <p>
+        Regional behavior and city-level user patterns can help the platform localize engagement campaigns and
+        improve location-based matching.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Single Users Dominate the Platform</h3>
+      <p>
+        The platform is heavily centered around single users, confirming the importance of optimizing the experience
+        for active dating and discovery journeys.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Business Recommendations</h2>
+  <div class="card">
+    <ul>
+      <li><span class="highlight">Improve onboarding:</span> Use profile completion prompts, progress bars, and badges to encourage users to add more details.</li>
+      <li><span class="highlight">Enhance personalization:</span> Use lifestyle indicators such as pets, diet, and habits to improve compatibility recommendations.</li>
+      <li><span class="highlight">Localize engagement:</span> Design city-level campaigns based on regional user patterns and market density.</li>
+      <li><span class="highlight">Use profile completeness in ranking:</span> Prioritize more complete profiles to improve match quality and user trust.</li>
+      <li><span class="highlight">Target young professionals:</span> Tailor premium features, prompts, and engagement campaigns toward the dominant user segment.</li>
+      <li><span class="highlight">Respect privacy:</span> Use demographic and income signals carefully to avoid unfair or sensitive personalization decisions.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Business Impact</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Higher Engagement</h3>
+      <p>Better onboarding and profile completion can increase user activity and match quality.</p>
+    </div>
+
+    <div class="card">
+      <h3>Improved Personalization</h3>
+      <p>Lifestyle and demographic segmentation can support more relevant recommendations.</p>
+    </div>
+
+    <div class="card">
+      <h3>Better Market Strategy</h3>
+      <p>Geographic and demographic insights can guide localized campaigns and growth opportunities.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Tools & Skills Demonstrated</h2>
+  <div class="card">
+    <span class="tag">Python</span>
+    <span class="tag">Pandas</span>
+    <span class="tag">NumPy</span>
+    <span class="tag">Matplotlib</span>
+    <span class="tag">Seaborn</span>
+    <span class="tag soft">EDA</span>
+    <span class="tag soft">Feature Engineering</span>
+    <span class="tag soft">Correlation Analysis</span>
+    <span class="tag soft">User Segmentation</span>
+    <span class="tag soft">Product Analytics</span>
+    <span class="tag soft">Business Recommendations</span>
+  </div>
+</section>
+
+<section>
+  <h2>Project Files</h2>
+  <div class="card">
+    <p>
+      Explore the Python notebook used for data cleaning, segmentation, visualization, and user behavior analysis.
+    </p>
+
+    <a href="../bumble/bumble_user_behavior_analysis.ipynb" class="btn">View Python Notebook</a>
+    <a href="../index.html" class="btn secondary">Back to Portfolio</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Akshay Vanathadupula | Bumble User Behavior Analytics Case Study
+</footer>
+
+</body>
+</html>
