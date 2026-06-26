@@ -1,1 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon Brazil Operations Case Study | Akshay Vanathadupula</title>
 
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", Arial, sans-serif; }
+    body { background: #f8fafc; color: #0f172a; line-height: 1.7; }
+    nav { padding: 18px 9%; background: white; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; }
+    nav a { color: #2563eb; text-decoration: none; font-weight: 700; }
+
+    header {
+      padding: 80px 9%;
+      background: linear-gradient(135deg, #e0f2fe, #ffffff, #ccfbf1);
+    }
+
+    .badge {
+      display: inline-block;
+      background: #ccfbf1;
+      color: #0f766e;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 { font-size: 50px; line-height: 1.1; margin-bottom: 18px; }
+    .subtitle { font-size: 22px; color: #2563eb; font-weight: 700; margin-bottom: 18px; }
+    header p { max-width: 950px; font-size: 18px; color: #475569; }
+
+    section { padding: 55px 9%; max-width: 1200px; margin: auto; }
+    h2 { font-size: 34px; margin-bottom: 22px; color: #0f172a; }
+    h3 { color: #2563eb; margin-bottom: 10px; }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 22px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.07);
+      margin-bottom: 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 24px;
+    }
+
+    p, li { color: #475569; font-size: 17px; }
+    ul { padding-left: 22px; }
+
+    .tag {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 7px 12px;
+      margin: 6px 6px 0 0;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .tag.teal { background: #ccfbf1; color: #0f766e; }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      margin: 14px 10px 0 0;
+      border-radius: 10px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .btn.secondary {
+      background: white;
+      color: #2563eb;
+      border: 1px solid #bfdbfe;
+    }
+
+    .highlight {
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: white;
+      border-top: 1px solid #e2e8f0;
+      color: #64748b;
+    }
+
+    @media (max-width: 750px) {
+      h1 { font-size: 38px; }
+      header, section { padding: 45px 6%; }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="../index.html">← Back to Portfolio</a>
+</nav>
+
+<header>
+  <span class="badge">SQL + Business Intelligence Case Study</span>
+  <h1>Amazon Brazil Operations Analysis</h1>
+  <p class="subtitle">Strategic Insights for Amazon India</p>
+  <p>
+    This case study analyzes Amazon Brazil's e-commerce operations to identify transferable insights
+    for Amazon India. The analysis focuses on payment behavior, customer segmentation, revenue trends,
+    product pricing, seasonal demand, and loyalty opportunities using SQL and business intelligence methods.
+  </p>
+
+  <a href="../amazon/amazon_sql_queries.sql" class="btn">View SQL File</a>
+  <a href="../amazon/amazon_business_case_study.pdf" class="btn secondary">Download Case Study</a>
+</header>
+
+<section>
+  <h2>Business Context</h2>
+  <div class="card">
+    <p>
+      Amazon operates across multiple international markets, where customer behavior, payment preferences,
+      seasonal demand, and category performance can vary significantly. This project uses Amazon Brazil
+      operational data as a benchmark to uncover patterns that can inform strategic recommendations for
+      Amazon India’s e-commerce growth.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Business Objective</h2>
+  <div class="card">
+    <ul>
+      <li>Analyze Amazon Brazil's operational and transactional data.</li>
+      <li>Identify customer payment preferences and revenue drivers.</li>
+      <li>Study seasonal and monthly sales trends.</li>
+      <li>Segment customers based on purchase frequency and order value.</li>
+      <li>Translate findings into practical recommendations for Amazon India.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Dataset Overview</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Data Scope</h3>
+      <p>
+        E-commerce transactional data covering customers, orders, payments, products,
+        order items, and category-level information.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Analysis Type</h3>
+      <p>
+        SQL-based business analysis covering revenue, payments, pricing, customer behavior,
+        segmentation, and operational trends.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Business Use Case</h3>
+      <p>
+        Use Brazil market behavior to generate strategic insights that can support Amazon India's
+        marketing, payment, inventory, and retention decisions.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Methodology</h2>
+  <div class="card">
+    <ul>
+      <li>Used SQL joins to connect orders, customers, products, payments, and order items.</li>
+      <li>Applied aggregations to calculate revenue, order counts, average values, and category performance.</li>
+      <li>Used CASE statements to classify customers and order value segments.</li>
+      <li>Used CTEs and subqueries for loyalty segmentation, seasonal analysis, and high-performing product analysis.</li>
+      <li>Used window functions to rank high-value customers and analyze month-over-month payment growth.</li>
+      <li>Exported selected outputs into Excel to support visual trend analysis.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Key Analyses Performed</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Payment Analysis</h3>
+      <p>
+        Evaluated payment type distribution, average transaction values, and monthly payment growth.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Revenue Analysis</h3>
+      <p>
+        Analyzed monthly revenue, seasonal sales patterns, and high-performing revenue periods.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Customer Segmentation</h3>
+      <p>
+        Classified customers into occasional, regular, loyal, returning, and high-value customer groups.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Product & Pricing Analysis</h3>
+      <p>
+        Studied price variation, top revenue categories, above-average selling products, and catalogue quality issues.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Key Insights</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Credit Cards Were the Dominant Payment Method</h3>
+      <p>
+        Credit cards accounted for 73.9% of total orders, showing strong preference for card-based purchases
+        and indicating an opportunity to promote EMI, cashback, and bank-partner offers.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Higher Average Payment Value via Credit Cards</h3>
+      <p>
+        Credit cards had the highest average payment value, suggesting customers are more comfortable
+        using credit cards for higher-value transactions.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Seasonal Demand Patterns Were Visible</h3>
+      <p>
+        Monthly and seasonal revenue analysis showed clear demand fluctuations, which can support
+        better campaign timing and inventory planning.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Customer Loyalty Opportunities Exist</h3>
+      <p>
+        Customer segmentation revealed large occasional customer groups and smaller loyal groups,
+        creating opportunities for repeat-purchase campaigns and tier-based loyalty programs.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>High-Value Customers Can Be Targeted</h3>
+      <p>
+        Customers were ranked by average order value to identify premium buyers suitable for exclusive rewards,
+        priority support, and personalized recommendations.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Product Categories Showed Pricing Gaps</h3>
+      <p>
+        Wide price variation across categories indicates opportunities for premium positioning,
+        bundling, price filters, and segmented promotions.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Recommendations for Amazon India</h2>
+  <div class="card">
+    <ul>
+      <li><span class="highlight">Strengthen credit card partnerships:</span> Launch bank offers, cashback programs, and EMI options to drive higher-value purchases.</li>
+      <li><span class="highlight">Build loyalty journeys:</span> Convert occasional customers into regular buyers using personalized follow-ups and repeat-purchase incentives.</li>
+      <li><span class="highlight">Plan seasonal campaigns:</span> Use monthly and seasonal trends to prepare inventory, discounts, and marketing before peak periods.</li>
+      <li><span class="highlight">Target high-value customers:</span> Create VIP rewards, early access deals, and premium support for high AOV customer segments.</li>
+      <li><span class="highlight">Improve category-level pricing:</span> Use category price variation to design budget, mid-range, and premium product strategies.</li>
+      <li><span class="highlight">Improve catalogue data quality:</span> Clean missing or incomplete category names to improve search, recommendations, and reporting accuracy.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Business Impact</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Revenue Growth</h3>
+      <p>Identifies payment and category strategies that can increase average order value and sales volume.</p>
+    </div>
+
+    <div class="card">
+      <h3>Customer Retention</h3>
+      <p>Supports loyalty and repeat-purchase strategies through customer segmentation.</p>
+    </div>
+
+    <div class="card">
+      <h3>Operational Planning</h3>
+      <p>Improves campaign timing, inventory planning, and product visibility using demand trends.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Tools & Skills Demonstrated</h2>
+  <div class="card">
+    <span class="tag">SQL</span>
+    <span class="tag">PostgreSQL</span>
+    <span class="tag">Excel</span>
+    <span class="tag">Joins</span>
+    <span class="tag">CTEs</span>
+    <span class="tag">Subqueries</span>
+    <span class="tag">Window Functions</span>
+    <span class="tag teal">Revenue Analysis</span>
+    <span class="tag teal">Customer Segmentation</span>
+    <span class="tag teal">Business Intelligence</span>
+    <span class="tag teal">Data Storytelling</span>
+    <span class="tag teal">Strategic Recommendations</span>
+  </div>
+</section>
+
+<section>
+  <h2>Project Files</h2>
+  <div class="card">
+    <p>
+      Explore the complete SQL queries and the full case study document used for this analysis.
+    </p>
+
+    <a href="../amazon/amazon_sql_queries.sql" class="btn">View SQL File</a>
+    <a href="../amazon/amazon_business_case_study.pdf" class="btn secondary">Download Case Study PDF</a>
+    <a href="../index.html" class="btn secondary">Back to Portfolio</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Akshay Vanathadupula | Amazon Brazil Operations Case Study
+</footer>
+
+</body>
+</html>
