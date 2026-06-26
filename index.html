@@ -15,51 +15,96 @@
 
     body {
       background: #f8fafc;
-      color: #1e293b;
+      color: #0f172a;
       line-height: 1.7;
     }
 
-    header {
-      background: linear-gradient(135deg, #ffffff, #e0f2fe);
-      padding: 70px 10%;
-      border-bottom: 1px solid #dbeafe;
+    html {
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e2e8f0;
+      padding: 16px 9%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h3 {
+      color: #2563eb;
+      font-size: 22px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #334155;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #14b8a6;
     }
 
     .hero {
-      max-width: 1000px;
+      padding: 90px 9%;
+      background: linear-gradient(135deg, #e0f2fe, #ffffff, #ccfbf1);
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 40px;
+      align-items: center;
     }
 
     .badge {
       display: inline-block;
-      background: #dbeafe;
-      color: #1d4ed8;
-      padding: 8px 14px;
+      background: #ccfbf1;
+      color: #0f766e;
+      padding: 8px 16px;
       border-radius: 999px;
       font-weight: 700;
       margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 54px;
+      font-size: 58px;
+      line-height: 1.1;
       color: #0f172a;
-      margin-bottom: 10px;
+      margin-bottom: 18px;
     }
 
-    .title {
-      font-size: 26px;
+    .hero h2 {
       color: #2563eb;
-      font-weight: 700;
+      font-size: 27px;
       margin-bottom: 20px;
     }
 
-    .intro {
-      max-width: 850px;
+    .hero p {
       font-size: 19px;
       color: #475569;
+      max-width: 760px;
+    }
+
+    .hero-card {
+      background: white;
+      padding: 32px;
+      border-radius: 24px;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+      border: 1px solid #e2e8f0;
+    }
+
+    .hero-card h3 {
+      color: #14b8a6;
+      margin-bottom: 14px;
     }
 
     .buttons {
-      margin-top: 30px;
+      margin-top: 32px;
     }
 
     .btn {
@@ -67,12 +112,12 @@
       padding: 13px 22px;
       margin-right: 12px;
       margin-bottom: 12px;
+      border-radius: 10px;
       background: #2563eb;
       color: white;
       text-decoration: none;
-      border-radius: 10px;
       font-weight: 700;
-      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+      box-shadow: 0 10px 22px rgba(37, 99, 235, 0.25);
     }
 
     .btn.secondary {
@@ -83,126 +128,157 @@
     }
 
     section {
-      padding: 55px 10%;
-      max-width: 1250px;
+      padding: 70px 9%;
+      max-width: 1280px;
       margin: auto;
     }
 
-    h2 {
-      font-size: 34px;
+    .section-title {
+      font-size: 38px;
+      margin-bottom: 12px;
       color: #0f172a;
-      margin-bottom: 24px;
     }
 
     .section-subtitle {
       color: #64748b;
-      margin-bottom: 28px;
-      font-size: 17px;
+      font-size: 18px;
+      margin-bottom: 34px;
+      max-width: 850px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 20px;
+    }
+
+    .stat {
+      background: white;
+      padding: 26px;
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 34px;
+      color: #14b8a6;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
+      gap: 26px;
     }
 
     .card {
       background: white;
-      padding: 28px;
-      border-radius: 18px;
+      padding: 30px;
+      border-radius: 22px;
       border: 1px solid #e2e8f0;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.07);
+      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.07);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 45px rgba(15, 23, 42, 0.12);
     }
 
     .card h3 {
-      color: #1d4ed8;
+      color: #2563eb;
+      font-size: 24px;
       margin-bottom: 10px;
-      font-size: 23px;
+    }
+
+    .highlight {
+      color: #0f172a;
+      font-weight: 700;
+      margin-bottom: 12px;
     }
 
     .card p {
       color: #475569;
-      margin-bottom: 12px;
-    }
-
-    .highlight {
-      font-weight: 700;
-      color: #0f172a;
+      margin-bottom: 14px;
     }
 
     .tag {
       display: inline-block;
-      background: #eff6ff;
-      color: #1d4ed8;
-      padding: 7px 11px;
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 7px 12px;
       margin: 6px 6px 0 0;
       border-radius: 999px;
       font-size: 14px;
       font-weight: 700;
     }
 
+    .tag.teal {
+      background: #ccfbf1;
+      color: #0f766e;
+    }
+
     .project-btn {
       display: inline-block;
       margin-top: 18px;
-      color: #2563eb;
+      color: #14b8a6;
       font-weight: 800;
       text-decoration: none;
     }
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 18px;
-      margin-top: 30px;
-    }
-
-    .stat {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      padding: 22px;
-      border-radius: 16px;
-      text-align: center;
-      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 28px;
-      color: #2563eb;
+    .experience-card {
+      border-left: 5px solid #14b8a6;
     }
 
     .contact-box {
-      background: linear-gradient(135deg, #2563eb, #0ea5e9);
+      background: linear-gradient(135deg, #2563eb, #14b8a6);
       color: white;
-      padding: 40px;
-      border-radius: 22px;
+      padding: 48px;
+      border-radius: 28px;
       text-align: center;
+      box-shadow: 0 20px 50px rgba(20, 184, 166, 0.25);
     }
 
     .contact-box h2 {
-      color: white;
+      font-size: 36px;
+      margin-bottom: 12px;
     }
 
     .contact-box p {
-      color: #e0f2fe;
-      margin-bottom: 22px;
+      color: #ecfeff;
+      margin-bottom: 26px;
     }
 
     footer {
       text-align: center;
-      padding: 28px;
+      padding: 30px;
+      background: white;
       color: #64748b;
-      background: #ffffff;
       border-top: 1px solid #e2e8f0;
     }
 
-    @media (max-width: 700px) {
-      h1 {
-        font-size: 40px;
+    @media (max-width: 850px) {
+      .hero {
+        grid-template-columns: 1fr;
       }
 
-      header, section {
-        padding: 45px 6%;
+      h1 {
+        font-size: 42px;
+      }
+
+      nav {
+        display: block;
+      }
+
+      nav div {
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 14px;
       }
     }
   </style>
@@ -210,16 +286,27 @@
 
 <body>
 
-<header>
-  <div class="hero">
+<nav>
+  <h3>Akshay V.</h3>
+  <div>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
     <span class="badge">Data Analyst Portfolio</span>
     <h1>Akshay Vanathadupula</h1>
-    <p class="title">Data Analyst | SQL | Python | Tableau | Excel</p>
-
-    <p class="intro">
-      Data Analyst with 2+ years of experience in business analysis, reporting, and ERP consulting.
-      I transform raw data into actionable insights through SQL, Python, Tableau, and Excel, helping
-      businesses improve decision-making through dashboards, analysis, and clear recommendations.
+    <h2>Data Analyst | SQL | Python | Tableau | Excel</h2>
+    <p>
+      I am a Data Analyst with 2+ years of experience in business analysis, reporting,
+      and ERP consulting. I transform raw data into actionable insights through SQL,
+      Python, Tableau, and Excel, helping businesses improve decision-making through
+      dashboards, analysis, and clear recommendations.
     </p>
 
     <div class="buttons">
@@ -228,38 +315,35 @@
       <a href="mailto:akshayvanathadupula11@gmail.com" class="btn secondary">Email</a>
     </div>
   </div>
+
+  <div class="hero-card">
+    <h3>What I Bring</h3>
+    <p>Calm, structured, and business-focused analytical thinking.</p>
+    <p>Strong ability to listen, understand problems, and translate them into data-driven solutions.</p>
+    <p>Experience across reporting, dashboards, workflow analysis, and operational insights.</p>
+  </div>
 </header>
 
-<section>
-  <h2>About Me</h2>
+<section id="about">
+  <h2 class="section-title">About Me</h2>
   <p class="section-subtitle">
-    I combine business process knowledge with analytics to solve real-world business problems.
+    I combine business process understanding with analytics to solve real-world problems.
+    My work focuses on data cleaning, exploratory analysis, dashboarding, segmentation,
+    reporting, and translating insights into practical business recommendations.
   </p>
 
   <div class="stats">
-    <div class="stat">
-      <strong>2+</strong>
-      Years Experience
-    </div>
-    <div class="stat">
-      <strong>3</strong>
-      Analytics Case Studies
-    </div>
-    <div class="stat">
-      <strong>4+</strong>
-      Core Tools
-    </div>
-    <div class="stat">
-      <strong>Top</strong>
-      NextLeap Fellow
-    </div>
+    <div class="stat"><strong>2+</strong>Years Experience</div>
+    <div class="stat"><strong>4</strong>Analytics Case Studies</div>
+    <div class="stat"><strong>7+</strong>Implementation Projects</div>
+    <div class="stat"><strong>Top</strong>NextLeap Fellow</div>
   </div>
 </section>
 
-<section>
-  <h2>Featured Projects</h2>
+<section id="projects">
+  <h2 class="section-title">Featured Projects</h2>
   <p class="section-subtitle">
-    End-to-end data analytics projects focused on business problems, insights, and recommendations.
+    End-to-end analytics projects focused on business problems, insights, dashboards, and recommendations.
   </p>
 
   <div class="grid">
@@ -269,11 +353,11 @@
       <p class="highlight">E-Commerce Revenue & Customer Segmentation Analysis</p>
       <p>
         Analyzed payments, pricing, revenue, customer segments, repeat customers, and monthly growth trends
-        to support pricing, promotion, inventory, and retention strategies.
+        to support pricing, promotions, inventory, and retention strategies.
       </p>
       <span class="tag">SQL</span>
       <span class="tag">Excel</span>
-      <span class="tag">Customer Segmentation</span>
+      <span class="tag teal">Customer Segmentation</span>
       <br>
       <a href="#" class="project-btn">Project Link Coming Soon →</a>
     </div>
@@ -287,7 +371,7 @@
       </p>
       <span class="tag">Python</span>
       <span class="tag">Tableau</span>
-      <span class="tag">Dashboard</span>
+      <span class="tag teal">Dashboard</span>
       <br>
       <a href="#" class="project-btn">Project Link Coming Soon →</a>
     </div>
@@ -297,11 +381,27 @@
       <p class="highlight">User Behavior & Statistical Segmentation Analysis</p>
       <p>
         Analyzed 59,000+ user profiles to evaluate demographics, profile completeness, income patterns,
-        regional behavior, and engagement opportunities.
+        regional behavior, and user engagement opportunities.
       </p>
       <span class="tag">Python</span>
       <span class="tag">Statistics</span>
-      <span class="tag">User Analytics</span>
+      <span class="tag teal">User Analytics</span>
+      <br>
+      <a href="#" class="project-btn">Project Link Coming Soon →</a>
+    </div>
+
+    <div class="card">
+      <h3>Flipkart Customer Support Analytics</h3>
+      <p class="highlight">Customer Satisfaction & Service Performance Analysis</p>
+      <p>
+        Analyzed customer support data to evaluate CSAT, response time, service-level adherence,
+        call duration, support channels, and regional performance to identify service bottlenecks
+        and improve customer experience.
+      </p>
+      <span class="tag">Excel</span>
+      <span class="tag">Dashboard</span>
+      <span class="tag">Pivot Tables</span>
+      <span class="tag teal">Operations Analytics</span>
       <br>
       <a href="#" class="project-btn">Project Link Coming Soon →</a>
     </div>
@@ -309,8 +409,12 @@
   </div>
 </section>
 
-<section>
-  <h2>Skills</h2>
+<section id="skills">
+  <h2 class="section-title">Skills</h2>
+  <p class="section-subtitle">
+    Technical and business skills used across analytics, reporting, dashboards, and process improvement.
+  </p>
+
   <div>
     <span class="tag">SQL</span>
     <span class="tag">Python</span>
@@ -320,31 +424,32 @@
     <span class="tag">Pandas</span>
     <span class="tag">NumPy</span>
     <span class="tag">Matplotlib</span>
-    <span class="tag">Business Analysis</span>
-    <span class="tag">Reporting</span>
-    <span class="tag">Dashboards</span>
-    <span class="tag">Root Cause Analysis</span>
+    <span class="tag teal">Business Analysis</span>
+    <span class="tag teal">Reporting</span>
+    <span class="tag teal">Dashboards</span>
+    <span class="tag teal">Root Cause Analysis</span>
+    <span class="tag teal">Workflow Optimization</span>
   </div>
 </section>
 
-<section>
-  <h2>Experience</h2>
+<section id="experience">
+  <h2 class="section-title">Experience</h2>
 
   <div class="grid">
-    <div class="card">
+    <div class="card experience-card">
       <h3>Tekgenio</h3>
       <p class="highlight">Odoo Functional Consultant</p>
       <p>
         Worked on requirements gathering, business process analysis, workflow optimization,
-        reporting, dashboards, implementation support, and stakeholder coordination.
+        reporting, dashboard solutions, implementation support, testing, and stakeholder coordination.
       </p>
     </div>
 
-    <div class="card">
+    <div class="card experience-card">
       <h3>Exporia Advertising Agency</h3>
       <p class="highlight">Creative Strategist</p>
       <p>
-        Supported user requirement analysis, market research, competitive analysis, project planning,
+        Supported requirement gathering, market research, competitive analysis, project planning,
         and coordination for a B2C on-demand service application.
       </p>
     </div>
@@ -352,22 +457,23 @@
 </section>
 
 <section>
-  <h2>Certification</h2>
+  <h2 class="section-title">Certification</h2>
   <div class="card">
     <h3>NextLeap Data Analyst Fellowship</h3>
     <p class="highlight">Top Fellow</p>
     <p>
-      Completed a 16-week Data Analyst Fellowship involving SQL, Python, Excel, Tableau,
-      business case studies, and analytics project work.
+      Completed a Data Analyst Fellowship involving SQL, Python, Excel, Tableau,
+      business case studies, dashboards, and analytics project work.
     </p>
   </div>
 </section>
 
-<section>
+<section id="contact">
   <div class="contact-box">
     <h2>Let's Connect</h2>
     <p>
-      Open to Data Analyst roles where I can apply analytics, dashboards, and business problem-solving.
+      Open to Data Analyst roles where I can apply analytics, dashboards,
+      and business problem-solving to support smarter decisions.
     </p>
     <a href="mailto:akshayvanathadupula11@gmail.com" class="btn secondary">Contact Me</a>
   </div>
