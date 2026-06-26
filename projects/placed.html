@@ -1,1 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Placed Case Study | Akshay Vanathadupula</title>
 
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", Arial, sans-serif; }
+    body { background: #f8fafc; color: #0f172a; line-height: 1.7; }
+    nav { padding: 18px 9%; background: white; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; }
+    nav a { color: #2563eb; text-decoration: none; font-weight: 700; }
+    header { padding: 80px 9%; background: linear-gradient(135deg, #e0f2fe, #ffffff, #ccfbf1); }
+    .badge { display: inline-block; background: #ccfbf1; color: #0f766e; padding: 8px 16px; border-radius: 999px; font-weight: 700; margin-bottom: 18px; }
+    h1 { font-size: 50px; line-height: 1.1; margin-bottom: 18px; }
+    .subtitle { font-size: 22px; color: #2563eb; font-weight: 700; margin-bottom: 18px; }
+    header p { max-width: 950px; font-size: 18px; color: #475569; }
+    section { padding: 55px 9%; max-width: 1200px; margin: auto; }
+    h2 { font-size: 34px; margin-bottom: 22px; color: #0f172a; }
+    h3 { color: #2563eb; margin-bottom: 10px; }
+    .card { background: white; padding: 28px; border-radius: 22px; border: 1px solid #e2e8f0; box-shadow: 0 14px 35px rgba(15, 23, 42, 0.07); margin-bottom: 24px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 24px; }
+    p, li { color: #475569; font-size: 17px; }
+    ul { padding-left: 22px; }
+    .tag { display: inline-block; background: #e0f2fe; color: #0369a1; padding: 7px 12px; margin: 6px 6px 0 0; border-radius: 999px; font-size: 14px; font-weight: 700; }
+    .tag.teal { background: #ccfbf1; color: #0f766e; }
+    .btn { display: inline-block; padding: 13px 22px; margin: 14px 10px 0 0; border-radius: 10px; background: #2563eb; color: white; text-decoration: none; font-weight: 700; }
+    .btn.secondary { background: white; color: #2563eb; border: 1px solid #bfdbfe; }
+    .highlight { color: #0f172a; font-weight: 700; }
+    .tableau-box { width: 100%; height: 720px; border: 1px solid #e2e8f0; border-radius: 18px; overflow: hidden; background: white; }
+    iframe { width: 100%; height: 100%; border: none; }
+    footer { text-align: center; padding: 30px; background: white; border-top: 1px solid #e2e8f0; color: #64748b; }
+    @media (max-width: 750px) { h1 { font-size: 38px; } header, section { padding: 45px 6%; } .tableau-box { height: 520px; } }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="../index.html">← Back to Portfolio</a>
+</nav>
+
+<header>
+  <span class="badge">Python + Tableau Case Study</span>
+  <h1>Placed Candidate Employability Analysis</h1>
+  <p class="subtitle">Identifying Drivers of Placement Success</p>
+  <p>
+    This project analyzes student placement outcomes to identify the strongest drivers of employability.
+    The analysis evaluates academic performance, technical skills, practical exposure, professional
+    competencies, and candidate archetypes to help Placed improve placement success and recruiter decision-making.
+  </p>
+
+  <a href="https://public.tableau.com/app/profile/akshay.vanathadupula/viz/NL_PLACED/NL_PLACED" class="btn" target="_blank">View Tableau Dashboard</a>
+  <a href="../placed/placed_analysis_notebook.ipynb" class="btn secondary">View Python Notebook</a>
+  <a href="../placed/placed_case_study.pdf" class="btn secondary">Download Case Study</a>
+</header>
+
+<section>
+  <h2>Business Context</h2>
+  <div class="card">
+    <p>
+      Placed is a hiring platform that connects students with recruiters. The business goal is to improve
+      placement success by identifying which candidate attributes contribute most to successful placement
+      outcomes. The project focuses on understanding why some students with strong academics fail to secure
+      jobs while others with moderate academics achieve successful placements.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>North Star Metric</h2>
+  <div class="card">
+    <h3>Placement Success Rate: 50.02%</h3>
+    <p>
+      Placement Success Rate measures the percentage of students who successfully get placed.
+      This metric helps evaluate the effectiveness of candidate preparation, recruiter matching,
+      and employability improvement initiatives.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Business Objective</h2>
+  <div class="card">
+    <ul>
+      <li>Identify the strongest factors influencing student placement success.</li>
+      <li>Compare placed and non-placed candidates across academic, technical, and professional dimensions.</li>
+      <li>Evaluate whether academics alone are sufficient to explain placement outcomes.</li>
+      <li>Develop candidate archetypes to support recruiter decision-making.</li>
+      <li>Create an interactive Tableau dashboard for stakeholders.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Analysis Approach</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Data Quality Check</h3>
+      <p>Validated missing values, duplicates, consistency, and outlier behavior before analysis.</p>
+    </div>
+
+    <div class="card">
+      <h3>EDA & Driver Analysis</h3>
+      <p>Analyzed technical skills, academics, internships, projects, communication, and problem-solving factors.</p>
+    </div>
+
+    <div class="card">
+      <h3>Candidate Archetypes</h3>
+      <p>Grouped students into employability profiles based on skill strength and placement readiness.</p>
+    </div>
+
+    <div class="card">
+      <h3>Dashboarding</h3>
+      <p>Built a Tableau dashboard to help stakeholders monitor placement performance and candidate readiness.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Key Insights</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Technical Skills Were Stronger Than Academics Alone</h3>
+      <p>
+        Students with stronger technical skills achieved better placement outcomes, even when academic
+        performance was only moderate.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Practical Exposure Improved Employability</h3>
+      <p>
+        Internships, projects, certifications, and hands-on experience increased recruiter confidence
+        and improved placement probability.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Professional Skills Also Mattered</h3>
+      <p>
+        Communication, teamwork, leadership, and problem-solving skills supported workplace readiness
+        and improved employability outcomes.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Balanced Profiles Performed Best</h3>
+      <p>
+        Candidates who combined technical capability, practical exposure, and professional readiness
+        achieved the highest placement success.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Candidate Archetypes</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Elite Employability Profiles</h3>
+      <p><span class="highlight">Placement Rate: 82% – 87%</span></p>
+      <p>Strong across academics, technical skills, internships, projects, communication, and problem-solving.</p>
+    </div>
+
+    <div class="card">
+      <h3>Technical-Core Achievers</h3>
+      <p><span class="highlight">Placement Rate: 70% – 83%</span></p>
+      <p>Strong technical capability with good project exposure, even when academics are moderate.</p>
+    </div>
+
+    <div class="card">
+      <h3>Industry-Ready Practitioners</h3>
+      <p><span class="highlight">Placement Rate: 55% – 77%</span></p>
+      <p>Strong practical exposure and professional readiness with room to improve technical depth.</p>
+    </div>
+
+    <div class="card">
+      <h3>High-Risk Employability Profiles</h3>
+      <p><span class="highlight">Placement Rate: 15% – 25%</span></p>
+      <p>Weak technical and practical foundations requiring targeted development support.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Tableau Dashboard</h2>
+  <div class="card">
+    <p>
+      The dashboard provides a centralized view of placement success, candidate performance,
+      skill drivers, segmentation, and stakeholder-level insights.
+    </p>
+
+    <a href="https://public.tableau.com/app/profile/akshay.vanathadupula/viz/NL_PLACED/NL_PLACED" class="btn" target="_blank">Open Interactive Dashboard</a>
+  </div>
+
+  <div class="tableau-box">
+    <iframe src="https://public.tableau.com/views/NL_PLACED/NL_PLACED?:showVizHome=no&:embed=true"></iframe>
+  </div>
+</section>
+
+<section>
+  <h2>Recommendations</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>For Placed</h3>
+      <ul>
+        <li>Create an Employability Score combining technical, practical, and professional competencies.</li>
+        <li>Use candidate archetypes to identify high-potential and at-risk students.</li>
+        <li>Prioritize skill-based shortlisting over academic-only filters.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>For Students</h3>
+      <ul>
+        <li>Build strong technical foundations through coding and domain skills.</li>
+        <li>Increase practical exposure through internships, projects, hackathons, and certifications.</li>
+        <li>Strengthen communication, teamwork, and problem-solving abilities.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>For Recruiters</h3>
+      <ul>
+        <li>Use multidimensional evaluation instead of relying only on academics.</li>
+        <li>Consider Technical-Core Achievers and Industry-Ready Practitioners.</li>
+        <li>Use employability segmentation to improve candidate selection efficiency.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Tools & Skills Demonstrated</h2>
+  <div class="card">
+    <span class="tag">Python</span>
+    <span class="tag">Pandas</span>
+    <span class="tag">Tableau</span>
+    <span class="tag">EDA</span>
+    <span class="tag">Data Cleaning</span>
+    <span class="tag">Correlation Analysis</span>
+    <span class="tag teal">Candidate Segmentation</span>
+    <span class="tag teal">Dashboarding</span>
+    <span class="tag teal">Business Recommendations</span>
+    <span class="tag teal">Data Storytelling</span>
+  </div>
+</section>
+
+<section>
+  <h2>Project Files</h2>
+  <div class="card">
+    <p>
+      The full dataset is not included in this repository due to size, but the case study,
+      notebook, and Tableau dashboard are available below.
+    </p>
+
+    <a href="https://public.tableau.com/app/profile/akshay.vanathadupula/viz/NL_PLACED/NL_PLACED" class="btn" target="_blank">View Tableau Dashboard</a>
+    <a href="../placed/placed_analysis_notebook.ipynb" class="btn secondary">View Python Notebook</a>
+    <a href="../placed/placed_case_study.pdf" class="btn secondary">Download Case Study PDF</a>
+    <a href="../index.html" class="btn secondary">Back to Portfolio</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Akshay Vanathadupula | Placed Employability Case Study
+</footer>
+
+</body>
+</html>
